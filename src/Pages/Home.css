@@ -1,0 +1,45 @@
+
+   
+  #home-content h3{
+     
+    opacity: 0;
+   animation: slideBottom 1s ease-in forwards;
+   animation-delay: .7s;
+ }
+
+
+ 
+ .btn-box {
+ 
+   display: inline-block;
+   padding: 12px 28px;
+ 
+   font-size: 16px;
+   color: #0f1624;
+   letter-spacing: 1px;
+   text-decoration: none;
+   font-weight: 600;
+ }
+ 
+ .btn-box:hover{
+   box-shadow: 0 0 5px cyan,0 0 25px cyan, 0 0 50px cyan,0 0 100px cyan;
+   background:#0ef;
+ }
+ .nav-style:hover{
+font-size: bold;
+ }
+ 
+ @keyframes slideBottom {
+   0%{
+     transform: translateY(-100px);
+     opacity: 0;
+   }
+   100%{
+     transform: translateY(0px);
+     opacity: 1;
+   }
+ }
+ 
+ .text{
+   color: #0ef;
+ }
