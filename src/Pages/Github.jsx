@@ -78,8 +78,10 @@ export const Github = () => {
           <Image
             m="auto"
             id="github-streak-stats"
+            
             src="https://github-readme-streak-stats.herokuapp.com/?user=jitugandhare&theme=sea&hide_border=true&border_radius=10&date_format=j%20M%5B%20Y%5D&background=#a084ca"
             alt="streak-stat"
+            
           />
         </Box>
       </Box>
@@ -102,7 +104,7 @@ export const Github = () => {
           <Image
             m="auto"
             id="github-stats-card"
-            src="https://github-readme-stats.vercel.app/api?username=jitugandhare&show_icons=true&title_color=#4c3575&text_color=#4c3575&icon_color=#4c3575&bg_color=red&border_radius=10&border_color=#4c3575"
+            src="https://github-readme-stats.vercel.app/api?username=jitugandhare&show_icons=true&title_color=#4c3575&text_color=#4c3575&icon_color=#4c3575&bg_color=red&border_radius=10&border_color=#4c3575&fontFamily=cursive"
             alt="stat-card"
           />
         </Box>
@@ -122,12 +124,16 @@ export const Github = () => {
         >
           <Heading size={"lg"} fontFamily={"cursive"}>Most Used Languages</Heading>
         </Box>
-        <Box w={{ base: '95%', sm: '95%', md: '95%', lg: '85%', xl: '85%', '2xl': '85%' }} m="30px auto" data-aos="fade-right">
+        <Box w={{ base: '95%', sm: '95%', md: '95%', lg: '85%', xl: '85%', '2xl': '85%' }} m="30px auto" data-aos="fade-right" fontFamily={"cursive"}>
           <Image
             m="auto"
             id="github-top-langs"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=jitugandhare&title_color=4C3575&icon_color=#4c3575&text_color=#4c3575&bg_color=#a084ca&show_icons=true"
+            // src="https://github-readme-stats.vercel.app/api/top-langs/?username=jitugandhare&title_color=4C3575&icon_color=#4c3575&text_color=#4c3575&bg_color=#a084ca&show_icons=true"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=jitugandhare&title_color=4C3575&icon_color=#4c3575&text_color=#4c3575&bg_color=#a084ca&show_icons=true&fontFamily=cursive"
+
+            
             alt="stat-top-lang"
+           
           />
         </Box>
       </Box>

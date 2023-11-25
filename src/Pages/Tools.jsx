@@ -7,19 +7,8 @@ import { TbBrandVscode } from "react-icons/tb";
 import { FaSlack } from "react-icons/fa";
 import { ImNpm } from "react-icons/im";
 import { BiLogoZoom } from "react-icons/bi";
-import { SiNodeDotJs, SiMongodb, SiMongoose } from 'react-icons/si'; 
-// import chakra from "../Assests/chakra-ui.jpg";
-// import css from "../Assests/css.png";
-// import github from "../Assests/github.png";
-// import html1 from "../Assests/html1.png";
-// import js from "../Assests/js.png";
-// import npm from "../Assests/npm.png";
-// import redux from "../Assests/redux.png";
-// import vscode from "../Assests/vscode.png";
-// import react from "../Assests/react1.png";
-// import Express from "../Assests/Expressjs.png"
-// import mongodb from "../Assests/mongodb.png"
-// import node from "../Assests/Nodejs.png"
+import { SiNodeDotJs, SiMongodb, SiMongoose } from 'react-icons/si';
+
 export const Tools = () => {
 
   return (
@@ -119,7 +108,7 @@ export const Tools = () => {
 
 
 
-           
+
 
 
 

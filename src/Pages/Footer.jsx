@@ -24,17 +24,17 @@ export const Footer = () => {
      
       justifyContent="space-between"
     >
-      <Box fontWeight={"bold"} color="#25cefd">
+      <Box fontWeight={"bold"} color="#25cefd" fontFamily={"cursive"}>
         {"JITU"}
       </Box>
-      <Box display={"flex"} alignItems={"center"}>
-        Made with{" "}
+      <Box display={"flex"} alignItems={"center"} fontFamily={"cursive"}>
+        Made {" "}  by{"  "} 
         <span>
           {" "}
-          <FaHeart color="red" style={{ margin: "0 5px" }} />
+          {/* <FaHeart color="red" style={{ margin: "0 5px" }} /> */}
         </span>{" "}
-        by{" "}
-        <span style={{ color: "#25cefd", marginLeft: "3px" }}> Jitu Gandhare!</span>
+       
+        <span style={{ color: "#25cefd", marginLeft: "3px",fontFamily:"cursive"}}> Jitu Gandhare </span>
       </Box>
       <Flex alignItems={"center"}>
         <Link id="contact-github" to="https://github.com/jitugandhare">

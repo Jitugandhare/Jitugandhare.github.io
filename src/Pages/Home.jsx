@@ -40,7 +40,7 @@ export const Home = () => {
     };
   }, []);
 
-  // fontFamily={"cursive"}
+ 
 
   const openLink = (url) => {
     window.open(url);
@@ -147,7 +147,7 @@ export const Home = () => {
           borderRadius="50%"
           padding="5px"
           margin="auto"
-          boxShadow="0px 19px 38px #337f94, 0px 15px 12px #4b636a"
+          // boxShadow="0px 19px 38px #337f94, 0px 15px 12px #4b636a"
           bgGradient="linear(to-b, #656865, #25cefd)"
         />
 

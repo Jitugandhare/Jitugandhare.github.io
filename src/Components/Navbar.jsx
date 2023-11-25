@@ -10,6 +10,7 @@ import {
   VStack,
   HStack,
 } from "@chakra-ui/react";
+
 import { FaMoon, FaSun } from "react-icons/fa";
 import { BiMenu, BiMenuAltLeft } from "react-icons/bi";
 import {
@@ -69,10 +70,22 @@ export const Navbar = () => {
 
 
           >
-            JITU&nbsp;
+
+            <HashLink
+
+              to="/#"
+            > JITU {" "}
 
 
-            <FontAwesomeIcon icon={faCode} className="fa-beat" />
+              <FontAwesomeIcon icon={faCode} className="fa-beat" />
+            </HashLink>
+
+
+            {/* 
+            <a href="./home"> JITU&nbsp;
+
+
+              <FontAwesomeIcon icon={faCode} className="fa-beat" /></a> */}
 
           </Box>
 

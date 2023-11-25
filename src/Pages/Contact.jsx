@@ -109,6 +109,7 @@ export const Contact = () => {
                     name="to_name"
                     value={formData.to_name}
                     onChange={(e) => handleChange(e)}
+                    fontFamily={"cursive"}
                     placeholder="Name"
                   />
                 </Box>
@@ -118,6 +119,7 @@ export const Contact = () => {
                     name="from_name"
                     value={formData.from_name}
                     onChange={(e) => handleChange(e)}
+                    fontFamily={"cursive"}
                     placeholder="Email"
                   />
                 </Box>
@@ -126,6 +128,7 @@ export const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={(e) => handleChange(e)}
+                    fontFamily={"cursive"}
                     placeholder="Message"
                   ></Textarea>
                 </Box>
@@ -138,7 +141,8 @@ export const Contact = () => {
                       _hover={{
                         bgGradient: "linear(to-r, #0ef, cyan.500)",
                       }}
-                      fontFaminly="cursive"
+                     
+                      fontFamily={"cursive"}
                       color="white"
                       p="10px 40px"
                       borderRadius={"5px"}
@@ -165,7 +169,7 @@ export const Contact = () => {
                     style={{ margin: "auto", fontSize: "35px" }}
                   />
                 </Text>
-                <Text color="black" id="contact-phone">
+                <Text color="black" id="contact-phone" fontFamily={"cursive"}>
                   +917999649443
                 </Text>
                
@@ -184,8 +188,8 @@ export const Contact = () => {
                     style={{ margin: "auto", fontSize: "45px" }}
                   />
                 </Text>
-                <Text color="black" id="contact-email">
-                  <a href="mailto:jitugandhare@gmail.com">jitugandhare@gmail.com</a>
+                <Text fontFamily={"cursive"} color="black" id="contact-email">
+                  <a  href="mailto:jitugandhare@gmail.com">jitugandhare@gmail.com</a>
                 </Text>
               </Box>
             </Container>
