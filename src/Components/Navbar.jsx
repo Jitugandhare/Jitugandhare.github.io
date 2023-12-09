@@ -42,6 +42,7 @@ export const Navbar = () => {
 
   return (
     <Box
+      
       bg="#25262b"
       boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
       position="sticky"

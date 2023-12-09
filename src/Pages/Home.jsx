@@ -114,6 +114,7 @@ export const Home = () => {
                   background="#0ef"
                   onClick={() => openLink("https://drive.google.com/drive/folders/1uMMZ_gNWlQmSwQuZLHEM-uBwxwlzYxAM?usp=sharing")}
                   className="home-resume btn-box"
+                  fontFamily={"cursive"}
                 >
                   Download Resume
                 </Button>

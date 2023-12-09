@@ -113,6 +113,7 @@ export const Projects = () => {
                 size={"md"}
                 mt="10px"
                 className="project-title"
+                fontFamily={"cursive"}
               >
                 OnFlick 
               </Heading>
@@ -120,6 +121,7 @@ export const Projects = () => {
                 className="project-description"
                 textAlign={"left"}
                 mt="10px"
+                fontFamily={"cursive"}
               >
                 "Elevate online shopping with our React-based e-commerce project, featuring a sleek design and seamless functionality. Enjoy intuitive navigation, real-time updates, and secure transactions for a modern and efficient shopping experience."
               </Text>
@@ -137,7 +139,7 @@ export const Projects = () => {
                   </Text>
 
                   <Text>
-                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" }} />
+                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } />
                   </Text>
                 </Flex>
               </Box>
@@ -230,6 +232,7 @@ export const Projects = () => {
                 size={"md"}
                 mt="10px"
                 className="project-title"
+                fontFamily={"cursive"}
               >
                 Boat & Bait
               </Heading>
@@ -237,6 +240,7 @@ export const Projects = () => {
                 className="project-description"
                 textAlign={"left"}
                 mt="10px"
+                fontFamily={"cursive"}
               >
                 This is a modern e-commerce platform for buying and exploring exquisite clothes related to babies. It provides a user-friendly interface, a wide range of clothes.
                
@@ -327,6 +331,7 @@ export const Projects = () => {
                 size={"md"}
                 mt="10px"
                 className="project-title"
+                fontFamily={"cursive"}
               >
                 Mikkushepora
               </Heading>
@@ -334,15 +339,16 @@ export const Projects = () => {
                 className="project-description"
                 textAlign={"left"}
                 mt="10px"
+                fontFamily={"cursive"}
               >
               "Experience Shepora's essence in our HTML, CSS, and JS clone. Enjoy sleek design, seamless navigation, and dynamic features for a user-friendly showcase of products and content."
               </Text>
               
-              <Text textAlign={"left"}>
+              <Text textAlign={"left"}  fontFamily={"cursive"}>
                 Added Login and Signup Functionalities
               </Text>
 
-              <Text textAlign={"left"}>
+              <Text textAlign={"left"}  fontFamily={"cursive"} >
                 Built landing page
               </Text>
 
@@ -450,6 +456,7 @@ export const Projects = () => {
                 size={"md"}
                 mt="10px"
                 className="project-title"
+                fontFamily={"cursive"}
               >
                 Boat & Bait
               </Heading>
@@ -457,14 +464,15 @@ export const Projects = () => {
                 className="project-description"
                 textAlign={"left"}
                 mt="10px"
+                fontFamily={"cursive"}
               >
                 This is a modern e-commerce platform for buying and exploring exquisite clothes related to babies. It provides a user-friendly interface, a wide range of clothes.
                
               </Text>
-              <Text textAlign={"left"}>Built Landing Page </Text>
-              <Text textAlign={"left"}>Built Footer Part </Text>
-              <Text textAlign={"left"}>Developed the Authentication functionality</Text>
-              <Text textAlign={"left"}>Payment functionality</Text>
+              <Text textAlign={"left"}  fontFamily={"cursive"}> Built Landing Page </Text>
+              <Text textAlign={"left"}  fontFamily={"cursive"}>Built Footer Part </Text>
+              <Text textAlign={"left"}  fontFamily={"cursive"}>Developed the Authentication functionality</Text>
+              <Text textAlign={"left"}  fontFamily={"cursive"}> Payment functionality</Text>
 
               <Box w={"100%"} mt="30px" className="project-tech-stack">
                 <Flex w={"100%"} justifyContent={"space-between"}>

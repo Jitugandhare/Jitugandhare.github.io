@@ -27,14 +27,15 @@ export const Footer = () => {
       <Box fontWeight={"bold"} color="#25cefd" fontFamily={"cursive"}>
         {"JITU"}
       </Box>
-      <Box display={"flex"} alignItems={"center"} fontFamily={"cursive"}>
-        Made {" "}  by{"  "} 
+      <Box display={"flex"} alignItems={"center"} fontFamily={"cursive"} color={'#25cefd'}>
+        Made {" "}  by{"  "} Jitu Gandhare{" "}
+        {/* <span style={{ color: "#25cefd", marginLeft: "3px",fontFamily:"cursive"}}>  </span> */}
         <span>
           {" "}
-          {/* <FaHeart color="red" style={{ margin: "0 5px" }} /> */}
+          <FaHeart color="red" style={{ margin: "0 5px" }} />
         </span>{" "}
        
-        <span style={{ color: "#25cefd", marginLeft: "3px",fontFamily:"cursive"}}> Jitu Gandhare </span>
+        {/* <span style={{ color: "#25cefd", marginLeft: "3px",fontFamily:"cursive"}}> Jitu Gandhare </span> */}
       </Box>
       <Flex alignItems={"center"}>
         <Link id="contact-github" to="https://github.com/jitugandhare">

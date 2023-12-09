@@ -36,6 +36,7 @@ export const Github = () => {
       textAlign={"center"}
       id="projects"
       color={"white"}
+      overflow={'hidden'}
     >
       <Box>
         <Box
@@ -54,7 +55,7 @@ export const Github = () => {
         <Box w={{ base: '95%', sm: '95%', md: '95%', lg: '85%', xl: '85%', '2xl': '85%' }} m="auto" data-aos="fade-left">
           <GitHubCalendar
             username="jitugandhare"
-            blockSize={20}
+            blockSize={18}
             transformData={gitcal}
           >
             Github

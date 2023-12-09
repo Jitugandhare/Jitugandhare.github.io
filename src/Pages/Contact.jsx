@@ -170,7 +170,7 @@ export const Contact = () => {
                   />
                 </Text>
                 <Text color="black" id="contact-phone" fontFamily={"cursive"}>
-                  +917999649443
+                  +91{" "}7999649443
                 </Text>
                
               </Box>
