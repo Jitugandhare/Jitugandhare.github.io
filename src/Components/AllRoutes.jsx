@@ -31,3 +31,6 @@ function AllRoutes() {
 }
 
 export default AllRoutes;
+
+
+// {/* <Route path="/skills" element={<Skills />} /> */}
