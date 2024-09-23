@@ -8,6 +8,7 @@ import {
   Grid,
   Center,
 } from "@chakra-ui/react";
+import { TbBrandSocketIo } from "react-icons/tb";
 import { SiExpress, SiRedux } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import { BiLogoTailwindCss } from "react-icons/bi";
@@ -27,7 +28,7 @@ import {
   SiJavascript,
   SiMongodb,
   SiNodedotjs,
-  
+
 
 } from "react-icons/si";
 import AOS from "aos";
@@ -62,126 +63,124 @@ export const Projects = () => {
 
       <Grid>
 
-{/* first */}
-<Box
+        {/* first */}
+        <Box
           id="project-sec"
           data-aos="fade-right"
-          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
-          borderRadius={"10px"}
+          _hover={{ bg: "#301f5f", borderColor: "#18112C" }}
+          borderRadius="10px"
           p="20px"
-          w="80%"
+          w={{ base: "95%", lg: "80%" }}  // Responsive width
           m="40px auto"
-          border={"1px inset #18112C"}
+          border="1px inset #18112C"
           className="project-card"
         >
           <Flex
-            gap={"30px"}
-            justifyContent={"space-evenly"}
-            direction={{
-              base: "column-reverse",
-              sm: "column-reverse",
-              md: "column-reverse",
-              lg: "row",
-              xl: "row",
-              "2xl": "row",
-            }}
+            gap="30px"
+            justifyContent="space-evenly"
+            direction={{ base: "column-reverse", lg: "row" }} // Cleaner direction change
           >
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Flex justifyContent={"space-between"}>
-                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-
-
-                
+            <Box w="100%">
+              <Flex justifyContent="space-between">
+                {/* Folder Icon */}
                 <Box>
-                  <Flex>
+                  <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
+                </Box>
+
+                {/* GitHub and Link Icons */}
+                <Box>
+                  <Flex alignItems="center" gap="10px">
                     <Link
                       href="https://github.com/Jitugandhare/Insta"
                       className="project-github-link"
+                      isExternal
                     >
-                      <FaGithub style={{ fontSize: "40px" }} />
+                      <FaGithub style={{ fontSize: "40px", color: "white" }} />
                     </Link>
                     <Link
                       href="https://thriving-meringue-a57f31.netlify.app"
                       className="project-deployed-link"
+                      isExternal
                     >
-                      {" "}
-                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
+                      <BiCopy style={{ fontSize: "40px", color: "white" }} />
                     </Link>
                   </Flex>
                 </Box>
               </Flex>
+
+              {/* Project Title */}
               <Heading
-                textAlign={"left"}
-                size={"md"}
+                textAlign="left"
+                size="md"
                 mt="10px"
+                fontFamily="cursive"
                 className="project-title"
-                fontFamily={"cursive"}
               >
                 Insta
               </Heading>
+
+              {/* Project Description */}
               <Text
-                className="project-description"
-                textAlign={"left"}
+                textAlign="left"
                 mt="10px"
-                fontFamily={"cursive"}
+                fontFamily="cursive"
+                className="project-description"
               >
-                "This project is a full-featured Instagram clone application, developed using the MERN stack (MongoDB, Express, React, Node.js), along with Redux for state management and ShadCN UI for a sleek, modern user interface."
+                "This project is a Instagram clone built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management, featuring a modern UI with ShadCN. Users can create and edit profiles, post images and captions, comment, like posts, follow/unfollow others, for users and posts. The application includes a notification system for likes, comments, and follows, as well as real-time chat and notifications using socket.io, providing an engaging and interactive experience."
               </Text>
-             
 
-              <Box w={"100%"} mt="30px" className="project-tech-stack">
-                <Flex w={"100%"} justifyContent={"space-between"}>
-                  <Text>
+              {/* Tech Stack Icons */}
+              <Box w="100%" mt="30px" className="project-tech-stack">
+                <Flex justifyContent="space-between" alignItems="center">
+                  {/* React Icon */}
+                  <Box textAlign="center">
                     <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
-                  </Text>
-                  <Text>
-                    <FaNodeJs
-                      style={{ fontSize: "40px", color: "#3fc3bd" }}
-                    />
-                  </Text>
-                  <Text>
-                  <SiRedux  style={{ fontSize: "40px", color: "#3fc3bd" }}/>
-                  </Text>
-                  <Text>
-                  <SiMongodb  style={{ fontSize: "40px", color: "#3fc3bd" }}/>
-                  </Text>
-                  <Text>
-                  <SiExpress  style={{ fontSize: "40px", color: "#3fc3bd" }}/>
-                  </Text>
-                
-                  
+                    <Text fontSize="sm" mt="5px">React</Text>
+                  </Box>
 
-                  <Text>
-                  <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" } }/>
-                    {/* <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } /> */}
-                  </Text>
+                  {/* Node.js Icon */}
+                  <Box textAlign="center">
+                    <FaNodeJs style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">Node.js</Text>
+                  </Box>
+
+                  {/* Redux Icon */}
+                  <Box textAlign="center">
+                    <SiRedux style={{ fontSize: "40px", color: "#7d32a8" }} />
+                    <Text fontSize="sm" mt="5px">Redux</Text>
+                  </Box>
+
+                  {/* MongoDB Icon */}
+                  <Box textAlign="center">
+                    <SiMongodb style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">MongoDB</Text>
+                  </Box>
+
+                  {/* Express Icon */}
+                  <Box textAlign="center">
+                    <SiExpress style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">Express</Text>
+                  </Box>
+                  {/* socketio */}
+                  <Box textAlign="center">
+                    <TbBrandSocketIo style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">Socket.io</Text>
+                  </Box>
+
+                  {/* Tailwind CSS Icon */}
+                  <Box textAlign="center">
+                    <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" }} />
+                    <Text fontSize="sm" mt="5px">Tailwind</Text>
+                  </Box>
                 </Flex>
               </Box>
             </Box>
 
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Image w="100%" src={Instaclone} />
+            {/* Image Section */}
+            <Box w="100%">
+              <Image w="100%" src={Instaclone} alt="Insta Project Screenshot" />
             </Box>
           </Flex>
-
         </Box>
 
 
@@ -190,7 +189,8 @@ export const Projects = () => {
 
 
 
-      <Box
+        {/* second project */}
+        <Box
           id="project-sec"
           data-aos="fade-right"
           _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
@@ -227,7 +227,7 @@ export const Projects = () => {
                 <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
 
 
-                
+
                 <Box>
                   <Flex>
                     <Link
@@ -253,7 +253,7 @@ export const Projects = () => {
                 className="project-title"
                 fontFamily={"cursive"}
               >
-                Salesway Dashboard  
+                Salesway Dashboard
               </Heading>
               <Text
                 className="project-description"
@@ -263,7 +263,7 @@ export const Projects = () => {
               >
                 "Developed a user-friendly navigation system using React, ensuring seamless access to various dashboard sections.Designed a performance scoring system to visualize user sales performance, encouraging competitive improvement."
               </Text>
-             
+
 
               <Box w={"100%"} mt="30px" className="project-tech-stack">
                 <Flex w={"100%"} justifyContent={"space-between"}>
@@ -277,7 +277,7 @@ export const Projects = () => {
                   </Text>
 
                   <Text>
-                  <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" } }/>
+                    <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" }} />
                     {/* <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } /> */}
                   </Text>
                 </Flex>
@@ -359,7 +359,7 @@ export const Projects = () => {
                 className="project-title"
                 fontFamily={"cursive"}
               >
-                OnFlick 
+                OnFlick
               </Heading>
               <Text
                 className="project-description"
@@ -369,7 +369,7 @@ export const Projects = () => {
               >
                 "Elevate online shopping with our React-based e-commerce project, featuring a sleek design and seamless functionality. Enjoy intuitive navigation, real-time updates, and secure transactions for a modern and efficient shopping experience."
               </Text>
-             
+
 
               <Box w={"100%"} mt="30px" className="project-tech-stack">
                 <Flex w={"100%"} justifyContent={"space-between"}>
@@ -383,7 +383,7 @@ export const Projects = () => {
                   </Text>
 
                   <Text>
-                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } />
+                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" }} />
                   </Text>
                 </Flex>
               </Box>
@@ -438,8 +438,8 @@ export const Projects = () => {
                 "2xl": "100%",
               }}
             >
-               <Image w="100%" 
-              src={bb} /> 
+              <Image w="100%"
+                src={bb} />
             </Box>
             <Box
               w={{
@@ -487,7 +487,7 @@ export const Projects = () => {
                 fontFamily={"cursive"}
               >
                 This is a modern e-commerce platform for buying and exploring exquisite clothes related to babies. It provides a user-friendly interface, a wide range of clothes.
-               
+
               </Text>
               <Text textAlign={"left"}>Built Landing Page </Text>
               <Text textAlign={"left"}>Built Footer Part </Text>
@@ -513,7 +513,7 @@ export const Projects = () => {
                 </Flex>
               </Box>
             </Box>
-            
+
           </Flex>
         </Box>
 
@@ -585,18 +585,18 @@ export const Projects = () => {
                 mt="10px"
                 fontFamily={"cursive"}
               >
-              "Experience Shepora's essence in our HTML, CSS, and JS clone. Enjoy sleek design, seamless navigation, and dynamic features for a user-friendly showcase of products and content."
+                "Experience Shepora's essence in our HTML, CSS, and JS clone. Enjoy sleek design, seamless navigation, and dynamic features for a user-friendly showcase of products and content."
               </Text>
-              
-              <Text textAlign={"left"}  fontFamily={"cursive"}>
+
+              <Text textAlign={"left"} fontFamily={"cursive"}>
                 Added Login and Signup Functionalities
               </Text>
 
-              <Text textAlign={"left"}  fontFamily={"cursive"} >
+              <Text textAlign={"left"} fontFamily={"cursive"} >
                 Built landing page
               </Text>
 
-             
+
               <Box w={"100%"} mt="30px" className="project-tech-stack">
                 <Flex w={"100%"} justifyContent={"space-between"}>
                   <Text>
@@ -610,7 +610,7 @@ export const Projects = () => {
                       style={{ fontSize: "40px", color: "#FDD835" }}
                     />
                   </Text>
-                  
+
                 </Flex>
               </Box>
             </Box>
@@ -662,8 +662,8 @@ export const Projects = () => {
                 "2xl": "100%",
               }}
             >
-               <Image w="100%" 
-              src={bb} /> 
+              <Image w="100%"
+                src={bb} />
             </Box>
             <Box
               w={{
@@ -711,12 +711,12 @@ export const Projects = () => {
                 fontFamily={"cursive"}
               >
                 This is a modern e-commerce platform for buying and exploring exquisite clothes related to babies. It provides a user-friendly interface, a wide range of clothes.
-               
+
               </Text>
-              <Text textAlign={"left"}  fontFamily={"cursive"}> Built Landing Page </Text>
-              <Text textAlign={"left"}  fontFamily={"cursive"}>Built Footer Part </Text>
-              <Text textAlign={"left"}  fontFamily={"cursive"}>Developed the Authentication functionality</Text>
-              <Text textAlign={"left"}  fontFamily={"cursive"}> Payment functionality</Text>
+              <Text textAlign={"left"} fontFamily={"cursive"}> Built Landing Page </Text>
+              <Text textAlign={"left"} fontFamily={"cursive"}>Built Footer Part </Text>
+              <Text textAlign={"left"} fontFamily={"cursive"}>Developed the Authentication functionality</Text>
+              <Text textAlign={"left"} fontFamily={"cursive"}> Payment functionality</Text>
 
               <Box w={"100%"} mt="30px" className="project-tech-stack">
                 <Flex w={"100%"} justifyContent={"space-between"}>
@@ -737,7 +737,7 @@ export const Projects = () => {
                 </Flex>
               </Box>
             </Box>
-            
+
           </Flex>
         </Box>
       </Grid>
