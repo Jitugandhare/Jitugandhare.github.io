@@ -8,6 +8,9 @@ import {
   Grid,
   Center,
 } from "@chakra-ui/react";
+import { SiExpress, SiRedux } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa6";
+import { BiLogoTailwindCss } from "react-icons/bi";
 import React, { useEffect } from "react";
 import { BiFolder, BiCopy } from "react-icons/bi";
 import { FaGithub, FaReact, FaHtml5 } from "react-icons/fa";
@@ -16,13 +19,16 @@ import { FaCss3Alt } from "react-icons/fa";
 import bb from '../Assets/Projects/bb.png'
 import onfli from '../Assets/Projects/onfli.png'
 import mikkushepo from '../Assets/Projects/mikkushepo.png'
+import Salesway from '../Assets/Projects/SalesWay.png'
+import Instaclone from "../Assets/Projects/Insta.png"
 
 import {
   SiChakraui,
   SiJavascript,
   SiMongodb,
   SiNodedotjs,
-  SiRedux,
+  
+
 } from "react-icons/si";
 import AOS from "aos";
 import { IoLogoJavascript } from "react-icons/io";
@@ -55,6 +61,244 @@ export const Projects = () => {
       </Heading>
 
       <Grid>
+
+{/* first */}
+<Box
+          id="project-sec"
+          data-aos="fade-right"
+          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
+          borderRadius={"10px"}
+          p="20px"
+          w="80%"
+          m="40px auto"
+          border={"1px inset #18112C"}
+          className="project-card"
+        >
+          <Flex
+            gap={"30px"}
+            justifyContent={"space-evenly"}
+            direction={{
+              base: "column-reverse",
+              sm: "column-reverse",
+              md: "column-reverse",
+              lg: "row",
+              xl: "row",
+              "2xl": "row",
+            }}
+          >
+            <Box
+              w={{
+                base: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "100%",
+                xl: "100%",
+                "2xl": "100%",
+              }}
+            >
+              <Flex justifyContent={"space-between"}>
+                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
+
+
+                
+                <Box>
+                  <Flex>
+                    <Link
+                      href="https://github.com/Jitugandhare/Insta"
+                      className="project-github-link"
+                    >
+                      <FaGithub style={{ fontSize: "40px" }} />
+                    </Link>
+                    <Link
+                      href="https://thriving-meringue-a57f31.netlify.app"
+                      className="project-deployed-link"
+                    >
+                      {" "}
+                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
+                    </Link>
+                  </Flex>
+                </Box>
+              </Flex>
+              <Heading
+                textAlign={"left"}
+                size={"md"}
+                mt="10px"
+                className="project-title"
+                fontFamily={"cursive"}
+              >
+                Insta
+              </Heading>
+              <Text
+                className="project-description"
+                textAlign={"left"}
+                mt="10px"
+                fontFamily={"cursive"}
+              >
+                "This project is a full-featured Instagram clone application, developed using the MERN stack (MongoDB, Express, React, Node.js), along with Redux for state management and ShadCN UI for a sleek, modern user interface."
+              </Text>
+             
+
+              <Box w={"100%"} mt="30px" className="project-tech-stack">
+                <Flex w={"100%"} justifyContent={"space-between"}>
+                  <Text>
+                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
+                  </Text>
+                  <Text>
+                    <FaNodeJs
+                      style={{ fontSize: "40px", color: "#3fc3bd" }}
+                    />
+                  </Text>
+                  <Text>
+                  <SiRedux  style={{ fontSize: "40px", color: "#3fc3bd" }}/>
+                  </Text>
+                  <Text>
+                  <SiMongodb  style={{ fontSize: "40px", color: "#3fc3bd" }}/>
+                  </Text>
+                  <Text>
+                  <SiExpress  style={{ fontSize: "40px", color: "#3fc3bd" }}/>
+                  </Text>
+                
+                  
+
+                  <Text>
+                  <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" } }/>
+                    {/* <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } /> */}
+                  </Text>
+                </Flex>
+              </Box>
+            </Box>
+
+            <Box
+              w={{
+                base: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "100%",
+                xl: "100%",
+                "2xl": "100%",
+              }}
+            >
+              <Image w="100%" src={Instaclone} />
+            </Box>
+          </Flex>
+
+        </Box>
+
+
+
+
+
+
+
+      <Box
+          id="project-sec"
+          data-aos="fade-right"
+          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
+          borderRadius={"10px"}
+          p="20px"
+          w="80%"
+          m="40px auto"
+          border={"1px inset #18112C"}
+          className="project-card"
+        >
+          <Flex
+            gap={"30px"}
+            justifyContent={"space-evenly"}
+            direction={{
+              base: "column-reverse",
+              sm: "column-reverse",
+              md: "column-reverse",
+              lg: "row",
+              xl: "row",
+              "2xl": "row",
+            }}
+          >
+            <Box
+              w={{
+                base: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "100%",
+                xl: "100%",
+                "2xl": "100%",
+              }}
+            >
+              <Flex justifyContent={"space-between"}>
+                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
+
+
+                
+                <Box>
+                  <Flex>
+                    <Link
+                      href="https://github.com/Jitugandhare/ut/tree/main/new-asssign/ut-assignment"
+                      className="project-github-link"
+                    >
+                      <FaGithub style={{ fontSize: "40px" }} />
+                    </Link>
+                    <Link
+                      href="https://ut-assignment.vercel.app/"
+                      className="project-deployed-link"
+                    >
+                      {" "}
+                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
+                    </Link>
+                  </Flex>
+                </Box>
+              </Flex>
+              <Heading
+                textAlign={"left"}
+                size={"md"}
+                mt="10px"
+                className="project-title"
+                fontFamily={"cursive"}
+              >
+                Salesway Dashboard  
+              </Heading>
+              <Text
+                className="project-description"
+                textAlign={"left"}
+                mt="10px"
+                fontFamily={"cursive"}
+              >
+                "Developed a user-friendly navigation system using React, ensuring seamless access to various dashboard sections.Designed a performance scoring system to visualize user sales performance, encouraging competitive improvement."
+              </Text>
+             
+
+              <Box w={"100%"} mt="30px" className="project-tech-stack">
+                <Flex w={"100%"} justifyContent={"space-between"}>
+                  <Text>
+                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
+                  </Text>
+                  <Text>
+                    <SiChakraui
+                      style={{ fontSize: "40px", color: "#3fc3bd" }}
+                    />
+                  </Text>
+
+                  <Text>
+                  <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" } }/>
+                    {/* <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } /> */}
+                  </Text>
+                </Flex>
+              </Box>
+            </Box>
+
+            <Box
+              w={{
+                base: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "100%",
+                xl: "100%",
+                "2xl": "100%",
+              }}
+            >
+              <Image w="100%" src={Salesway} />
+            </Box>
+          </Flex>
+
+        </Box>
         <Box
           id="project-sec"
           data-aos="fade-right"

@@ -10,7 +10,7 @@ import {
 import React, { useEffect } from "react";
 import AOS from "aos";
 import { Link } from "react-router-dom";
-// import resume from '../Assets/Resume/Sharvari-Hupare-Resume.pdf'
+
 
 export const About = () => {
   useEffect(() => {
