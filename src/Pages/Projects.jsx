@@ -14,6 +14,7 @@ import { FaNodeJs } from "react-icons/fa6";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import React, { useEffect } from "react";
 import { BiFolder, BiCopy } from "react-icons/bi";
+import { SiStyledcomponents } from "react-icons/si";
 import { FaGithub, FaReact, FaHtml5 } from "react-icons/fa";
 import { TbJson } from "react-icons/tb";
 import { FaCss3Alt } from "react-icons/fa";
@@ -22,6 +23,7 @@ import onfli from '../Assets/Projects/onfli.png'
 import mikkushepo from '../Assets/Projects/mikkushepo.png'
 import Salesway from '../Assets/Projects/SalesWay.png'
 import Instaclone from "../Assets/Projects/Insta.png"
+import Hebron from "../Assets/Projects/Hebron.png"
 
 import {
   SiChakraui,
@@ -62,7 +64,7 @@ export const Projects = () => {
       </Heading>
 
       <Grid>
-
+     
         {/* first */}
         <Box
           id="project-sec"
@@ -183,6 +185,104 @@ export const Projects = () => {
           </Flex>
         </Box>
 
+        <Box
+          id="project-sec"
+          data-aos="fade-right"
+          _hover={{ bg: "#301f5f", borderColor: "#18112C" }}
+          borderRadius="10px"
+          p="20px"
+          w={{ base: "95%", lg: "80%" }}  // Responsive width
+          m="40px auto"
+          border="1px inset #18112C"
+          className="project-card"
+        >
+          <Flex
+            gap="30px"
+            justifyContent="space-evenly"
+            direction={{ base: "column-reverse", lg: "row" }} // Cleaner direction change
+          >
+            <Box w="100%">
+              <Flex justifyContent="space-between">
+                {/* Folder Icon */}
+                <Box>
+                  <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
+                </Box>
+
+                {/* GitHub and Link Icons */}
+                <Box>
+                  <Flex alignItems="center" gap="10px">
+                    <Link
+                      href="https://github.com/Jitugandhare/ammplicom"
+                      className="project-github-link"
+                      isExternal
+                    >
+                      <FaGithub style={{ fontSize: "40px", color: "white" }} />
+                    </Link>
+                    <Link
+                      href="https://landing-page-lake-eight-56.vercel.app/"
+                      className="project-deployed-link"
+                      isExternal
+                    >
+                      <BiCopy style={{ fontSize: "40px", color: "white" }} />
+                    </Link>
+                  </Flex>
+                </Box>
+              </Flex>
+
+              {/* Project Title */}
+              <Heading
+                textAlign="left"
+                size="md"
+                mt="10px"
+                fontFamily="cursive"
+                className="project-title"
+              >
+                HEBRON NUTRITION: A Health & Wellness
+              </Heading>
+
+              {/* Project Description */}
+              <Text
+                textAlign="left"
+                mt="10px"
+                fontFamily="cursive"
+                className="project-description"
+              >
+                HEBRON NUTRITION is a modern and user-friendly web application designed to promote health and wellness by offering personalized nutrition advice, health tips, and product recommendations. Built with React.js for a dynamic and responsive user interface, the project leverages styled-components to create modular, reusable, and aesthetically appealing styles.
+              </Text>
+
+              {/* Tech Stack Icons */}
+              <Box w="100%" mt="30px" className="project-tech-stack">
+                <Flex justifyContent="space-between" alignItems="center">
+                  {/* React Icon */}
+                  <Box textAlign="center">
+                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
+                    <Text fontSize="sm" mt="5px">React</Text>
+                  </Box>
+
+                  {/* Node.js Icon */}
+                  
+                  {/* Redux Icon */}
+                  <Box textAlign="center">
+                    <SiRedux style={{ fontSize: "40px", color: "#7d32a8" }} />
+                    <Text fontSize="sm" mt="5px">Redux</Text>
+                  </Box>
+
+
+                  {/* Tailwind CSS Icon */}
+                  <Box textAlign="center">
+                    <SiStyledcomponents  style={{ fontSize: "45px", color: "#2e6ff2" }} />
+                    <Text fontSize="sm" mt="5px">Styled-Components</Text>
+                  </Box>
+                </Flex>
+              </Box>
+            </Box>
+
+            {/* Image Section */}
+            <Box w="100%">
+              <Image w="100%" src={Hebron} alt="Hebron-nutrition" />
+            </Box>
+          </Flex>
+        </Box>
 
 
 

@@ -13,10 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
-<<<<<<< HEAD
     "lucide-react": "^0.445.0",
-=======
->>>>>>> b7e7dd7e4ff3c1191b51a0b9453de113ad3c85fd
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.0.6",
