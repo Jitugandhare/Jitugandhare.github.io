@@ -220,7 +220,7 @@ export const Navbar = () => {
                       <Button
                         onClick={() =>
                           openResume(
-                            "https://drive.google.com/file/d/1yp0jS5gKpfSIWtFfTWSjB535UBAGa3or/view?usp=sharing"
+                            "https://drive.google.com/drive/folders/1uMMZ_gNWlQmSwQuZLHEM-uBwxwlzYxAM?usp=sharing"
                           )
                         }
                         backgroundImage={
@@ -302,7 +302,7 @@ export const Navbar = () => {
               <Button
                 onClick={() =>
                   openResume(
-                    "https://drive.google.com/file/d/1yp0jS5gKpfSIWtFfTWSjB535UBAGa3or/view?usp=sharing"
+                    "https://drive.google.com/drive/folders/1uMMZ_gNWlQmSwQuZLHEM-uBwxwlzYxAM?usp=sharing"
                   )
                 }
                 backgroundImage={"linear-gradient(to right, #25cefd, #25cefd)"}

@@ -24,16 +24,19 @@ import mikkushepo from '../Assets/Projects/mikkushepo.png'
 import Salesway from '../Assets/Projects/SalesWay.png'
 import Instaclone from "../Assets/Projects/Insta.png"
 import Hebron from "../Assets/Projects/Hebron.png"
+import Stock from "../Assets/Projects/Stock.png"
 
 import {
   SiChakraui,
   SiJavascript,
   SiMongodb,
+  
   SiNodedotjs,
 
 
 } from "react-icons/si";
 import AOS from "aos";
+import { TbBrandNextjs } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io";
 
 export const Projects = () => {
@@ -64,7 +67,7 @@ export const Projects = () => {
       </Heading>
 
       <Grid>
-     
+
         {/* first */}
         <Box
           id="project-sec"
@@ -118,7 +121,7 @@ export const Projects = () => {
                 fontFamily="cursive"
                 className="project-title"
               >
-                Insta
+                Insta-Fista
               </Heading>
 
               {/* Project Description */}
@@ -260,7 +263,7 @@ export const Projects = () => {
                   </Box>
 
                   {/* Node.js Icon */}
-                  
+
                   {/* Redux Icon */}
                   <Box textAlign="center">
                     <SiRedux style={{ fontSize: "40px", color: "#7d32a8" }} />
@@ -270,7 +273,7 @@ export const Projects = () => {
 
                   {/* Tailwind CSS Icon */}
                   <Box textAlign="center">
-                    <SiStyledcomponents  style={{ fontSize: "45px", color: "#2e6ff2" }} />
+                    <SiStyledcomponents style={{ fontSize: "45px", color: "#2e6ff2" }} />
                     <Text fontSize="sm" mt="5px">Styled-Components</Text>
                   </Box>
                 </Flex>
@@ -286,6 +289,124 @@ export const Projects = () => {
 
 
 
+        <Box
+          id="project-sec"
+          data-aos="fade-right"
+          _hover={{ bg: "#301f5f", borderColor: "#18112C" }}
+          borderRadius="10px"
+          p="20px"
+          w={{ base: "95%", lg: "80%" }}  // Responsive width
+          m="40px auto"
+          border="1px inset #18112C"
+          className="project-card"
+        >
+          <Flex
+            gap="30px"
+            justifyContent="space-evenly"
+            direction={{ base: "column-reverse", lg: "row" }} // Cleaner direction change
+          >
+            <Box w="100%">
+              <Flex justifyContent="space-between">
+                {/* Folder Icon */}
+                <Box>
+                  <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
+                </Box>
+
+                {/* GitHub and Link Icons */}
+                <Box>
+                  <Flex alignItems="center" gap="10px">
+                    <Link
+                      href="https://github.com/Jitugandhare/Stock-subscription"
+                      className="project-github-link"
+                      isExternal
+                    >
+                      <FaGithub style={{ fontSize: "40px", color: "white" }} />
+                    </Link>
+                    <Link
+                      href="https://stock-subscription.vercel.app/"
+                      className="project-deployed-link"
+                      isExternal
+                    >
+                      <BiCopy style={{ fontSize: "40px", color: "white" }} />
+                    </Link>
+                  </Flex>
+                </Box>
+              </Flex>
+
+              {/* Project Title */}
+              <Heading
+                textAlign="left"
+                size="md"
+                mt="10px"
+                fontFamily="cursive"
+                className="project-title"
+              >
+                Stock Ticker Web Application
+              </Heading>
+
+              {/* Project Description */}
+              <Text
+                textAlign="left"
+                mt="10px"
+                fontFamily="cursive"
+                className="project-description"
+              >
+                "This is a web application that allows users to subscribe to and view detailed stock trading information. The app features real-time updates for stock prices and other relevant financial data.
+              </Text>
+              {/* Tech Stack Icons */}
+              <Box w="100%" mt="30px" className="project-tech-stack">
+                <Flex justifyContent="space-between" alignItems="center">
+                  {/* React Icon */}
+                  <Box textAlign="center">
+                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
+                    <Text fontSize="sm" mt="5px">React</Text>
+                  </Box>
+
+                  {/* Node.js Icon */}
+                  <Box textAlign="center">
+                    <FaNodeJs style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">Node.js</Text>
+                  </Box>
+
+                  {/* Redux Icon */}
+                  <Box textAlign="center">
+                    <TbBrandNextjs style={{ fontSize: "40px", color: "black" }} />
+                    <Text fontSize="sm" mt="5px">Nextjs</Text>
+                  </Box>
+
+                  {/* MongoDB Icon */}
+                  <Box textAlign="center">
+                    <SiMongodb style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">MongoDB</Text>
+                  </Box>
+
+                  {/* Express Icon */}
+                  {/* <Box textAlign="center">
+                    <SiExpress style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">Express</Text>
+                  </Box> */}
+                  {/* socketio */}
+                  {/* <Box textAlign="center">
+                    <TbBrandSocketIo style={{ fontSize: "40px", color: "green" }} />
+                    <Text fontSize="sm" mt="5px">Socket.io</Text>
+                  </Box> */}
+
+                  {/* Tailwind CSS Icon */}
+                  <Box textAlign="center">
+                    <FaCss3Alt style={{ fontSize: "45px", color: "#2e6ff2" }} />
+                    <Text fontSize="sm" mt="5px">Tailwind</Text>
+                  </Box>
+                </Flex>
+              </Box>
+            </Box>
+
+
+            {/* Image Section */}
+            <Box w="100%">
+              <Image w="100%" src={Stock} alt="Insta Project Screenshot" />
+            </Box>
+          </Flex>
+        </Box>
 
 
 
