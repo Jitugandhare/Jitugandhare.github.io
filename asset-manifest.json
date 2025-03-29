@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.885c8f0a.css",
-    "main.js": "/static/js/main.6a3273b3.js",
+    "main.js": "/static/js/main.89bf95af.js",
     "static/js/787.9c86b36b.chunk.js": "/static/js/787.9c86b36b.chunk.js",
     "static/media/Hebron.png": "/static/media/Hebron.8e7270d9a53d5c486e7e.png",
     "static/media/bb.png": "/static/media/bb.3bae5aecb781a285a4cc.png",
@@ -10,16 +10,16 @@
     "static/media/Insta.png": "/static/media/Insta.c56ee78f0eb79c94264d.png",
     "static/media/Professional_Pic.png": "/static/media/Professional_Pic.267778a351f1d89820df.png",
     "static/media/Stock.png": "/static/media/Stock.722d8dd57ab9ea166655.png",
-    "static/media/resume.pdf": "/static/media/resume.be153bc5cc6c7ce405d7.pdf",
+    "static/media/resume.pdf": "/static/media/resume.a77bd07278d3200b5331.pdf",
     "static/media/SalesWay.png": "/static/media/SalesWay.64de6f509d9df2618938.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.885c8f0a.css.map": "/static/css/main.885c8f0a.css.map",
-    "main.6a3273b3.js.map": "/static/js/main.6a3273b3.js.map",
+    "main.89bf95af.js.map": "/static/js/main.89bf95af.js.map",
     "787.9c86b36b.chunk.js.map": "/static/js/787.9c86b36b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.885c8f0a.css",
-    "static/js/main.6a3273b3.js"
+    "static/js/main.89bf95af.js"
   ]
 }
