@@ -103,7 +103,7 @@ export const Projects = () => {
                       <FaGithub style={{ fontSize: "40px", color: "white" }} />
                     </Link>
                     <Link
-                      href="https://thriving-meringue-a57f31.netlify.app"
+                      href="https://new-jfuz.onrender.com"
                       className="project-deployed-link"
                       isExternal
                     >
@@ -131,7 +131,7 @@ export const Projects = () => {
                 fontFamily="cursive"
                 className="project-description"
               >
-                "This project is a Instagram clone built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management, featuring a modern UI with ShadCN. Users can create and edit profiles, post images and captions, comment, like posts, follow/unfollow others, for users and posts. The application includes a notification system for likes, comments, and follows, as well as real-time chat and notifications using socket.io, providing an engaging and interactive experience."
+                "This project is a Insta-Fista built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management, featuring a modern UI with ShadCN. Users can create and edit profiles, post images and captions, comment, like posts, follow/unfollow others, for users and posts. The application includes a notification system for likes, comments, and follows, as well as real-time chat and notifications using socket.io, providing an engaging and interactive experience."
               </Text>
 
               {/* Tech Stack Icons */}

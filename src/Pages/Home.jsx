@@ -112,7 +112,7 @@ export const Home = () => {
                   mt="40px"
                   id="resume-button-2"
                   background="#0ef"
-                  onClick={() => openLink("https://drive.google.com/drive/folders/1uMMZ_gNWlQmSwQuZLHEM-uBwxwlzYxAM?usp=sharing")}
+                  onClick={() => openLink("https://drive.google.com/file/d/1agDPHiViXhL3SBvuGoHAvePQQu6XwtX_/view?usp=sharing")}
                   className="home-resume btn-box"
                   fontFamily={"cursive"}
                 >
