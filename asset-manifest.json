@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.885c8f0a.css",
-    "main.js": "/static/js/main.6f2ffc4f.js",
+    "main.js": "/static/js/main.c80a4a3b.js",
     "static/js/787.9c86b36b.chunk.js": "/static/js/787.9c86b36b.chunk.js",
     "static/media/Hebron.png": "/static/media/Hebron.8e7270d9a53d5c486e7e.png",
     "static/media/bb.png": "/static/media/bb.3bae5aecb781a285a4cc.png",
     "static/media/onfli.png": "/static/media/onfli.ad96c6f46ffd4ff39f38.png",
     "static/media/mikkushepo.png": "/static/media/mikkushepo.625e7601113050bba30e.png",
+    "static/media/Shoplique.png": "/static/media/Shoplique.cbeac32f1a4fe00d9c09.png",
     "static/media/Insta.png": "/static/media/Insta.c56ee78f0eb79c94264d.png",
+    "static/media/TaskManagement.png": "/static/media/TaskManagement.5dd64b01e06766aedaed.png",
     "static/media/Professional_Pic.png": "/static/media/Professional_Pic.267778a351f1d89820df.png",
     "static/media/Stock.png": "/static/media/Stock.722d8dd57ab9ea166655.png",
     "static/media/resume.pdf": "/static/media/resume.a77bd07278d3200b5331.pdf",
@@ -15,11 +17,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.885c8f0a.css.map": "/static/css/main.885c8f0a.css.map",
-    "main.6f2ffc4f.js.map": "/static/js/main.6f2ffc4f.js.map",
+    "main.c80a4a3b.js.map": "/static/js/main.c80a4a3b.js.map",
     "787.9c86b36b.chunk.js.map": "/static/js/787.9c86b36b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.885c8f0a.css",
-    "static/js/main.6f2ffc4f.js"
+    "static/js/main.c80a4a3b.js"
   ]
 }
