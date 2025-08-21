@@ -1,111 +1,110 @@
+import React, { useEffect } from "react";
 import {
   Box,
   Flex,
   Heading,
   Text,
   Image,
-  Container,
   Button,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
 
 export const About = () => {
   useEffect(() => {
     AOS.init({ delay: 300 });
   }, []);
+
   return (
-    <>
-      <Box
-        b="none"
-        textAlign={"center"}
-        id="about"
-        className="about section"
-        bg={"#25262b"}
-        color={"white"}
+    <Box
+      id="about"
+      bg="#25262b"
+      color="white"
+      py={{ base: 12, md: 20 }}
+      px={{ base: 4, md: 8 }}  // less horizontal padding for full width feel
+      textAlign="center"
+      borderRadius="md"
+      boxShadow="lg"
+      w="100vw"               // full viewport width
+      position="relative"     // to prevent horizontal scroll due to w=100vw + padding
+      left="50%"
+      right="50%"
+      marginLeft="-50vw"
+      marginRight="-50vw"
+      className="about section"
+    >
+      <Heading
+        fontFamily="cursive"
+        fontWeight="bold"
+        size="3xl"
+        mb={{ base: 10, md: 16 }}
+        data-aos="fade-right"
       >
-        <Heading
-          mt="50px"
-          className="aboutmehead"
-          display={"inline-block"}
-          padding="10px"
-          data-aos="fade-right"
-          mb="45px"
-          textAlign={"center"}
-          fontFamily={"cursive"}
-          size="2xl"
-          as="h1"
+        ABOUT{" "}
+        <Box as="span" color="#0ef" aria-label="me">
+          ME
+        </Box>
+      </Heading>
+
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        align="center"
+        justify="space-between"
+        gap={{ base: 10, lg: 16 }}
+      >
+        <Box
+          flex="1"
+          maxW={{ base: "90%", md: "70%", lg: "45%" }}
+          mx="auto"
+          data-aos="zoom-out"
+          _hover={{ transform: "scale(1.05)", transition: "0.3s ease-in-out" }}
+          rounded="xl"
+          overflow="hidden"
+          boxShadow="xl"
+          cursor="pointer"
         >
-          ABOUT{" "}
-          <span style={{ color: "#0ef", textAlign: "center" }}>ME</span>
-        </Heading>
-        <Flex
-          justifyContent={"space-around"}
-          direction={{
-            base: "column",
-            sm: "column",
-            md: "column",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-          gap="30px"
-          alignItems={"center"}
+          <Image
+            src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif"
+            alt="About Me GIF"
+            w="100%"
+            h="auto"
+            objectFit="cover"
+            borderRadius="xl"
+            loading="lazy"
+          />
+        </Box>
+
+        <Box
+          flex="1"
+          maxW={{ base: "90%", md: "70%", lg: "50%" }}
+          textAlign={{ base: "center", lg: "left" }}
         >
-          <Box
-            w={{
-              base: "90%",
-              sm: "90%",
-              md: "70%",
-              lg: "50%",
-              xl: "40%",
-              "2xl": "40%",
-            }}
-            data-aos="zoom-out"
+          <Text
+            fontSize={{ base: "lg", md: "xl" }}
+            fontFamily="cursive"
+            lineHeight="tall"
+            mb={6}
+            data-aos="fade-right"
           >
-            <Image
-              w="100%"
-              border={"1px inset"}
-              boxShadow="dark-md"
-              p="6"
-              rounded="md"
-              src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif"
-              borderTopRadius={"50%"}
-              borderLeftRadius={"50%"}
-            />
-          </Box>
-          <Box
-            w={{
-              base: "90%",
-              sm: "90%",
-              md: "70%",
-              lg: "50%",
-              xl: "50%",
-              "2xl": "50%",
-            }}
+            Detail-oriented full-stack web developer passionate about tech
+            stacks like HTML, CSS, JavaScript, React, and Node.js. I thrive on
+            building user-friendly web applications with clean code. A
+            dedicated team player with a keen eye for detail, always eager to
+            learn and grow alongside the company.
+          </Text>
+
+          <Button
+            colorScheme="cyan"
+            size="md"
+            as="a"
+            href="#contact"
+            data-aos="fade-up"
+            _hover={{ bg: "cyan.500" }}
           >
-            <Text
-              id="user-detail-intro"
-              data-aos="fade-right"
-              fontSize={"22px"}
-              color={"white"}
-              textAlign={"left"}
-              fontFamily={"cursive"}
-              mb="20px"
-            >
-              Detail-orientated full-stack web developer,who loves working with
-              tech stacks like HTML,CSS,Javascript ,React and Nodejs etc. and passionate
-              about developing user-friendly web applications . Team player with
-              an eye for detail. An enthusiastic individual with zeal to grow,
-              curious to explore and learn new things and dedicated to company
-              growth and improvements.
-            </Text>
-          </Box>
-        </Flex>
-      </Box>
-    </>
+            Contact Me
+          </Button>
+        </Box>
+      </Flex>
+    </Box>
   );
 };
-
-// export default About;

@@ -6,963 +6,299 @@ import {
   Text,
   Flex,
   Grid,
-  Center,
+  SimpleGrid,
 } from "@chakra-ui/react";
-import { TbBrandSocketIo } from "react-icons/tb";
-import { SiExpress, SiRedux } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
-import { BiLogoTailwindCss } from "react-icons/bi";
-import React, { useEffect } from "react";
-import { BiFolder, BiCopy } from "react-icons/bi";
-import { SiStyledcomponents } from "react-icons/si";
-import { FaGithub, FaReact, FaHtml5 } from "react-icons/fa";
-import { TbJson } from "react-icons/tb";
-import { FaCss3Alt } from "react-icons/fa";
-import bb from '../Assets/Projects/bb.png'
-import onfli from '../Assets/Projects/onfli.png'
-import mikkushepo from '../Assets/Projects/mikkushepo.png'
-import Salesway from '../Assets/Projects/SalesWay.png'
-import Instaclone from "../Assets/Projects/Insta.png"
-import Hebron from "../Assets/Projects/Hebron.png"
-import Stock from "../Assets/Projects/Stock.png"
-
-import {
-  SiChakraui,
-  SiJavascript,
-  SiMongodb,
-  
-  SiNodedotjs,
-
-
-} from "react-icons/si";
-import AOS from "aos";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandSocketIo, TbBrandNextjs, TbJson } from "react-icons/tb";
+import { SiExpress, SiRedux, SiRazorpay, SiStyledcomponents, SiTailwindcss, SiChakraui, SiJavascript, SiMongodb } from "react-icons/si";
+import { FaNodeJs, FaGithub, FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { BiFolder, BiCopy, BiLogoTailwindCss } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
-export const Projects = () => {
-  useEffect(() => {
-    AOS.init({ delay: 300 });
-  }, []);
+// Import your project images
+import bb from '../Assets/Projects/bb.png';
+import onfli from '../Assets/Projects/onfli.png';
+import mikkushepo from '../Assets/Projects/mikkushepo.png';
+import Salesway from '../Assets/Projects/SalesWay.png';
+import Instaclone from "../Assets/Projects/Insta.png";
+import Hebron from "../Assets/Projects/Hebron.png";
+import ShopliquImage from "../Assets/Projects/Shoplique.png";
+import TaskManagement from "../Assets/Projects/TaskManagement.png";
+import Stock from "../Assets/Projects/Stock.png";
+
+// Project data array for better maintainability
+const projectsData = [
+  {
+    id: 1,
+    title: "Shoplique",
+    description: "A full-featured e-commerce web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js), designed to offer users a smooth, secure, and responsive online shopping experience. Features user authentication, product browsing, real-time cart updates, and Razorpay payment integration.",
+    image: ShopliquImage,
+    githubLink: "https://github.com/Jitugandhare/Shoplique",
+    deployedLink: "https://shoplique.onrender.com",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: FaNodeJs, name: "Node.js", color: "green" },
+      { icon: SiRedux, name: "Redux", color: "#7d32a8" },
+      { icon: SiMongodb, name: "MongoDB", color: "green" },
+      { icon: SiExpress, name: "Express", color: "green" },
+      { icon: SiRazorpay, name: "Razorpay", color: "blue" },
+      { icon: FaCss3Alt, name: "CSS3", color: "#264de4" }
+    ]
+  },
+  {
+    id: 2,
+    title: "Task Management",
+    description: "A full-featured task management web application built with the MERN stack and Tailwind CSS. Users can register as User or Admin with role-based access control and comprehensive task management capabilities.",
+    image: TaskManagement,
+    githubLink: "https://github.com/Jitugandhare/Task-management",
+    deployedLink: "https://task-management-2-imev.onrender.com/",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: FaNodeJs, name: "Node.js", color: "green" },
+      { icon: SiRedux, name: "Redux", color: "#7d32a8" },
+      { icon: SiMongodb, name: "MongoDB", color: "green" },
+      { icon: SiExpress, name: "Express", color: "green" },
+      { icon: SiTailwindcss, name: "Tailwind", color: "#38B2AC" }
+    ]
+  },
+  {
+    id: 3,
+    title: "Insta-Fista",
+    description: "An Instagram clone built with the MERN stack and Redux for state management, featuring a modern UI. Users can create profiles, post images, comment, like posts, follow/unfollow others, and enjoy real-time chat using socket.io.",
+    image: Instaclone,
+    githubLink: "https://github.com/Jitugandhare/Insta",
+    deployedLink: "https://new-jfuz.onrender.com",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: FaNodeJs, name: "Node.js", color: "green" },
+      { icon: SiRedux, name: "Redux", color: "#7d32a8" },
+      { icon: SiMongodb, name: "MongoDB", color: "green" },
+      { icon: SiExpress, name: "Express", color: "green" },
+      { icon: TbBrandSocketIo, name: "Socket.io", color: "green" },
+      { icon: BiLogoTailwindCss, name: "Tailwind", color: "#2e6ff2" }
+    ]
+  },
+  {
+    id: 4,
+    title: "HEBRON NUTRITION: A Health & Wellness",
+    description: "A modern and user-friendly web application designed to promote health and wellness by offering personalized nutrition advice, health tips, and product recommendations. Built with React.js and styled-components.",
+    image: Hebron,
+    githubLink: "https://github.com/Jitugandhare/ammplicom",
+    deployedLink: "https://landing-page-lake-eight-56.vercel.app/",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: SiRedux, name: "Redux", color: "#7d32a8" },
+      { icon: SiStyledcomponents, name: "Styled-Components", color: "#2e6ff2" }
+    ]
+  },
+  {
+    id: 5,
+    title: "Stock Ticker Web Application",
+    description: "A web application that allows users to subscribe to and view detailed stock trading information. The app features real-time updates for stock prices and other relevant financial data.",
+    image: Stock,
+    githubLink: "https://github.com/Jitugandhare/Stock-subscription",
+    deployedLink: "https://stock-subscription.vercel.app/",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: FaNodeJs, name: "Node.js", color: "green" },
+      { icon: TbBrandNextjs, name: "Next.js", color: "black" },
+      { icon: SiMongodb, name: "MongoDB", color: "green" },
+      { icon: FaCss3Alt, name: "CSS3", color: "#2e6ff2" }
+    ]
+  },
+  {
+    id: 6,
+    title: "Salesway Dashboard",
+    description: "Developed a user-friendly navigation system using React, ensuring seamless access to various dashboard sections. Designed a performance scoring system to visualize user sales performance, encouraging competitive improvement.",
+    image: Salesway,
+    githubLink: "https://github.com/Jitugandhare/ut/tree/main/new-asssign/ut-assignment",
+    deployedLink: "https://ut-assignment.vercel.app/",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: SiChakraui, name: "Chakra UI", color: "#3fc3bd" },
+      { icon: BiLogoTailwindCss, name: "Tailwind", color: "#2e6ff2" }
+    ]
+  },
+  {
+    id: 7,
+    title: "OnFlick",
+    description: "Elevate online shopping with our React-based e-commerce project, featuring a sleek design and seamless functionality. Enjoy intuitive navigation, real-time updates, and secure transactions for a modern shopping experience.",
+    image: onfli,
+    githubLink: "https://github.com/Jitugandhare/desisive-duck",
+    deployedLink: "https://desisive-duck.vercel.app/",
+    techStack: [
+      { icon: FaReact, name: "React", color: "#3fc3bd" },
+      { icon: SiChakraui, name: "Chakra UI", color: "#3fc3bd" },
+      { icon: TbJson, name: "JSON", color: "#2e6ff2" }
+    ]
+  },
+  {
+    id: 8,
+    title: "Boat & Bait",
+    description: "A modern e-commerce platform for buying and exploring exquisite baby clothes. Features user-friendly interface, wide range of products, landing page, footer, authentication functionality, and payment integration.",
+    image: bb,
+    githubLink: "https://github.com/Jitugandhare/-gutsy-sheet-7629",
+    deployedLink: "https://frolicking-bubblegum-e45b74.netlify.app/",
+    techStack: [
+      { icon: FaHtml5, name: "HTML5", color: "coral" },
+      { icon: FaCss3Alt, name: "CSS3", color: "blue" },
+      { icon: IoLogoJavascript, name: "JavaScript", color: "#FDD835" },
+      { icon: TbJson, name: "JSON", color: "#2e6ff2" }
+    ]
+  },
+  {
+    id: 9,
+    title: "Mikkushepora",
+    description: "Experience Sephora's essence in our HTML, CSS, and JS clone. Enjoy sleek design, seamless navigation, and dynamic features for a user-friendly showcase of products and content. Includes login/signup functionalities and landing page.",
+    image: mikkushepo,
+    githubLink: "https://github.com/Jitugandhare/knowledgeable-breath-5856-",
+    deployedLink: "https://roaring-hotteok-b61a42.netlify.app/",
+    techStack: [
+      { icon: FaHtml5, name: "HTML5", color: "coral" },
+      { icon: FaCss3Alt, name: "CSS3", color: "blue" },
+      { icon: IoLogoJavascript, name: "JavaScript", color: "#FDD835" }
+    ]
+  }
+];
+
+// Component for individual project card
+export const ProjectCard = ({ project }) => {
   return (
     <Box
-      cursor={"pointer"}
-      textAlign={"center"}
-      id="projects"
-      bg={"#25262b"}
-      color={"white"}
+      data-aos="fade-up"
+      _hover={{ bg: "#301f5f", borderColor: "#0ef" }}
+      borderRadius="15px"
+      p="25px"
+      border="2px solid #18112C"
+      className="project-card"
+      transition="all 0.3s ease"
+      bg="#1a1a2e"
     >
-      <Heading
-        mt="40px"
-        textAlign={"center"}
-        className="projects"
-        display={"inline-block"}
-        padding="10px"
-        as="h1"
-        size={"2xl"}
-        color={"#0ef"}
-        fontFamily={"cursive"}
-        data-aos="fade-right"
+      <Flex
+        gap="20px"
+        direction={{ base: "column", lg: "row" }}
+        align="stretch"
       >
-        PROJECTS
-      </Heading>
-
-      <Grid>
-
-        {/* first */}
-        <Box
-          id="project-sec"
-          data-aos="fade-right"
-          _hover={{ bg: "#301f5f", borderColor: "#18112C" }}
-          borderRadius="10px"
-          p="20px"
-          w={{ base: "95%", lg: "80%" }}  // Responsive width
-          m="40px auto"
-          border="1px inset #18112C"
-          className="project-card"
-        >
-          <Flex
-            gap="30px"
-            justifyContent="space-evenly"
-            direction={{ base: "column-reverse", lg: "row" }} // Cleaner direction change
-          >
-            <Box w="100%">
-              <Flex justifyContent="space-between">
-                {/* Folder Icon */}
-                <Box>
-                  <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                </Box>
-
-                {/* GitHub and Link Icons */}
-                <Box>
-                  <Flex alignItems="center" gap="10px">
-                    <Link
-                      href="https://github.com/Jitugandhare/Insta"
-                      className="project-github-link"
-                      isExternal
-                    >
-                      <FaGithub style={{ fontSize: "40px", color: "white" }} />
-                    </Link>
-                    <Link
-                      href="https://new-jfuz.onrender.com"
-                      className="project-deployed-link"
-                      isExternal
-                    >
-                      <BiCopy style={{ fontSize: "40px", color: "white" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-
-              {/* Project Title */}
-              <Heading
-                textAlign="left"
-                size="md"
-                mt="10px"
-                fontFamily="cursive"
-                className="project-title"
+        {/* Content Section */}
+        <Box flex="1" display="flex" flexDirection="column">
+          <Flex justifyContent="space-between" mb="15px">
+            <BiFolder style={{ fontSize: "35px", color: "#388E3C" }} />
+            <Flex gap="10px">
+              <Link
+                href={project.githubLink}
+                className="project-github-link"
+                isExternal
+                _hover={{ transform: "scale(1.1)" }}
+                transition="transform 0.2s"
               >
-                Insta-Fista
-              </Heading>
-
-              {/* Project Description */}
-              <Text
-                textAlign="left"
-                mt="10px"
-                fontFamily="cursive"
-                className="project-description"
+                <FaGithub style={{ fontSize: "30px", color: "white" }} />
+              </Link>
+              <Link
+                href={project.deployedLink}
+                className="project-deployed-link"
+                isExternal
+                _hover={{ transform: "scale(1.1)" }}
+                transition="transform 0.2s"
               >
-                "This project is a Insta-Fista built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management, featuring a modern UI with ShadCN. Users can create and edit profiles, post images and captions, comment, like posts, follow/unfollow others, for users and posts. The application includes a notification system for likes, comments, and follows, as well as real-time chat and notifications using socket.io, providing an engaging and interactive experience."
-              </Text>
-
-              {/* Tech Stack Icons */}
-              <Box w="100%" mt="30px" className="project-tech-stack">
-                <Flex justifyContent="space-between" alignItems="center">
-                  {/* React Icon */}
-                  <Box textAlign="center">
-                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
-                    <Text fontSize="sm" mt="5px">React</Text>
-                  </Box>
-
-                  {/* Node.js Icon */}
-                  <Box textAlign="center">
-                    <FaNodeJs style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">Node.js</Text>
-                  </Box>
-
-                  {/* Redux Icon */}
-                  <Box textAlign="center">
-                    <SiRedux style={{ fontSize: "40px", color: "#7d32a8" }} />
-                    <Text fontSize="sm" mt="5px">Redux</Text>
-                  </Box>
-
-                  {/* MongoDB Icon */}
-                  <Box textAlign="center">
-                    <SiMongodb style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">MongoDB</Text>
-                  </Box>
-
-                  {/* Express Icon */}
-                  <Box textAlign="center">
-                    <SiExpress style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">Express</Text>
-                  </Box>
-                  {/* socketio */}
-                  <Box textAlign="center">
-                    <TbBrandSocketIo style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">Socket.io</Text>
-                  </Box>
-
-                  {/* Tailwind CSS Icon */}
-                  <Box textAlign="center">
-                    <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                    <Text fontSize="sm" mt="5px">Tailwind</Text>
-                  </Box>
-                </Flex>
-              </Box>
-            </Box>
-
-            {/* Image Section */}
-            <Box w="100%">
-              <Image w="100%" src={Instaclone} alt="Insta Project Screenshot" />
-            </Box>
-          </Flex>
-        </Box>
-
-        <Box
-          id="project-sec"
-          data-aos="fade-right"
-          _hover={{ bg: "#301f5f", borderColor: "#18112C" }}
-          borderRadius="10px"
-          p="20px"
-          w={{ base: "95%", lg: "80%" }}  // Responsive width
-          m="40px auto"
-          border="1px inset #18112C"
-          className="project-card"
-        >
-          <Flex
-            gap="30px"
-            justifyContent="space-evenly"
-            direction={{ base: "column-reverse", lg: "row" }} // Cleaner direction change
-          >
-            <Box w="100%">
-              <Flex justifyContent="space-between">
-                {/* Folder Icon */}
-                <Box>
-                  <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                </Box>
-
-                {/* GitHub and Link Icons */}
-                <Box>
-                  <Flex alignItems="center" gap="10px">
-                    <Link
-                      href="https://github.com/Jitugandhare/ammplicom"
-                      className="project-github-link"
-                      isExternal
-                    >
-                      <FaGithub style={{ fontSize: "40px", color: "white" }} />
-                    </Link>
-                    <Link
-                      href="https://landing-page-lake-eight-56.vercel.app/"
-                      className="project-deployed-link"
-                      isExternal
-                    >
-                      <BiCopy style={{ fontSize: "40px", color: "white" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-
-              {/* Project Title */}
-              <Heading
-                textAlign="left"
-                size="md"
-                mt="10px"
-                fontFamily="cursive"
-                className="project-title"
-              >
-                HEBRON NUTRITION: A Health & Wellness
-              </Heading>
-
-              {/* Project Description */}
-              <Text
-                textAlign="left"
-                mt="10px"
-                fontFamily="cursive"
-                className="project-description"
-              >
-                HEBRON NUTRITION is a modern and user-friendly web application designed to promote health and wellness by offering personalized nutrition advice, health tips, and product recommendations. Built with React.js for a dynamic and responsive user interface, the project leverages styled-components to create modular, reusable, and aesthetically appealing styles.
-              </Text>
-
-              {/* Tech Stack Icons */}
-              <Box w="100%" mt="30px" className="project-tech-stack">
-                <Flex justifyContent="space-between" alignItems="center">
-                  {/* React Icon */}
-                  <Box textAlign="center">
-                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
-                    <Text fontSize="sm" mt="5px">React</Text>
-                  </Box>
-
-                  {/* Node.js Icon */}
-
-                  {/* Redux Icon */}
-                  <Box textAlign="center">
-                    <SiRedux style={{ fontSize: "40px", color: "#7d32a8" }} />
-                    <Text fontSize="sm" mt="5px">Redux</Text>
-                  </Box>
-
-
-                  {/* Tailwind CSS Icon */}
-                  <Box textAlign="center">
-                    <SiStyledcomponents style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                    <Text fontSize="sm" mt="5px">Styled-Components</Text>
-                  </Box>
-                </Flex>
-              </Box>
-            </Box>
-
-            {/* Image Section */}
-            <Box w="100%">
-              <Image w="100%" src={Hebron} alt="Hebron-nutrition" />
-            </Box>
-          </Flex>
-        </Box>
-
-
-
-        <Box
-          id="project-sec"
-          data-aos="fade-right"
-          _hover={{ bg: "#301f5f", borderColor: "#18112C" }}
-          borderRadius="10px"
-          p="20px"
-          w={{ base: "95%", lg: "80%" }}  // Responsive width
-          m="40px auto"
-          border="1px inset #18112C"
-          className="project-card"
-        >
-          <Flex
-            gap="30px"
-            justifyContent="space-evenly"
-            direction={{ base: "column-reverse", lg: "row" }} // Cleaner direction change
-          >
-            <Box w="100%">
-              <Flex justifyContent="space-between">
-                {/* Folder Icon */}
-                <Box>
-                  <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                </Box>
-
-                {/* GitHub and Link Icons */}
-                <Box>
-                  <Flex alignItems="center" gap="10px">
-                    <Link
-                      href="https://github.com/Jitugandhare/Stock-subscription"
-                      className="project-github-link"
-                      isExternal
-                    >
-                      <FaGithub style={{ fontSize: "40px", color: "white" }} />
-                    </Link>
-                    <Link
-                      href="https://stock-subscription.vercel.app/"
-                      className="project-deployed-link"
-                      isExternal
-                    >
-                      <BiCopy style={{ fontSize: "40px", color: "white" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-
-              {/* Project Title */}
-              <Heading
-                textAlign="left"
-                size="md"
-                mt="10px"
-                fontFamily="cursive"
-                className="project-title"
-              >
-                Stock Ticker Web Application
-              </Heading>
-
-              {/* Project Description */}
-              <Text
-                textAlign="left"
-                mt="10px"
-                fontFamily="cursive"
-                className="project-description"
-              >
-                "This is a web application that allows users to subscribe to and view detailed stock trading information. The app features real-time updates for stock prices and other relevant financial data.
-              </Text>
-              {/* Tech Stack Icons */}
-              <Box w="100%" mt="30px" className="project-tech-stack">
-                <Flex justifyContent="space-between" alignItems="center">
-                  {/* React Icon */}
-                  <Box textAlign="center">
-                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
-                    <Text fontSize="sm" mt="5px">React</Text>
-                  </Box>
-
-                  {/* Node.js Icon */}
-                  <Box textAlign="center">
-                    <FaNodeJs style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">Node.js</Text>
-                  </Box>
-
-                  {/* Redux Icon */}
-                  <Box textAlign="center">
-                    <TbBrandNextjs style={{ fontSize: "40px", color: "black" }} />
-                    <Text fontSize="sm" mt="5px">Nextjs</Text>
-                  </Box>
-
-                  {/* MongoDB Icon */}
-                  <Box textAlign="center">
-                    <SiMongodb style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">MongoDB</Text>
-                  </Box>
-
-                  {/* Express Icon */}
-                  {/* <Box textAlign="center">
-                    <SiExpress style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">Express</Text>
-                  </Box> */}
-                  {/* socketio */}
-                  {/* <Box textAlign="center">
-                    <TbBrandSocketIo style={{ fontSize: "40px", color: "green" }} />
-                    <Text fontSize="sm" mt="5px">Socket.io</Text>
-                  </Box> */}
-
-                  {/* Tailwind CSS Icon */}
-                  <Box textAlign="center">
-                    <FaCss3Alt style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                    <Text fontSize="sm" mt="5px">Tailwind</Text>
-                  </Box>
-                </Flex>
-              </Box>
-            </Box>
-
-
-            {/* Image Section */}
-            <Box w="100%">
-              <Image w="100%" src={Stock} alt="Insta Project Screenshot" />
-            </Box>
-          </Flex>
-        </Box>
-
-
-
-        {/* second project */}
-        <Box
-          id="project-sec"
-          data-aos="fade-right"
-          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
-          borderRadius={"10px"}
-          p="20px"
-          w="80%"
-          m="40px auto"
-          border={"1px inset #18112C"}
-          className="project-card"
-        >
-          <Flex
-            gap={"30px"}
-            justifyContent={"space-evenly"}
-            direction={{
-              base: "column-reverse",
-              sm: "column-reverse",
-              md: "column-reverse",
-              lg: "row",
-              xl: "row",
-              "2xl": "row",
-            }}
-          >
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Flex justifyContent={"space-between"}>
-                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-
-
-
-                <Box>
-                  <Flex>
-                    <Link
-                      href="https://github.com/Jitugandhare/ut/tree/main/new-asssign/ut-assignment"
-                      className="project-github-link"
-                    >
-                      <FaGithub style={{ fontSize: "40px" }} />
-                    </Link>
-                    <Link
-                      href="https://ut-assignment.vercel.app/"
-                      className="project-deployed-link"
-                    >
-                      {" "}
-                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-              <Heading
-                textAlign={"left"}
-                size={"md"}
-                mt="10px"
-                className="project-title"
-                fontFamily={"cursive"}
-              >
-                Salesway Dashboard
-              </Heading>
-              <Text
-                className="project-description"
-                textAlign={"left"}
-                mt="10px"
-                fontFamily={"cursive"}
-              >
-                "Developed a user-friendly navigation system using React, ensuring seamless access to various dashboard sections.Designed a performance scoring system to visualize user sales performance, encouraging competitive improvement."
-              </Text>
-
-
-              <Box w={"100%"} mt="30px" className="project-tech-stack">
-                <Flex w={"100%"} justifyContent={"space-between"}>
-                  <Text>
-                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
-                  </Text>
-                  <Text>
-                    <SiChakraui
-                      style={{ fontSize: "40px", color: "#3fc3bd" }}
-                    />
-                  </Text>
-
-                  <Text>
-                    <BiLogoTailwindCss style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                    {/* <TbJson style={{ fontSize: "45px", color: "#2e6ff2" } } /> */}
-                  </Text>
-                </Flex>
-              </Box>
-            </Box>
-
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Image w="100%" src={Salesway} />
-            </Box>
+                <BiCopy style={{ fontSize: "30px", color: "white" }} />
+              </Link>
+            </Flex>
           </Flex>
 
-        </Box>
-        <Box
-          id="project-sec"
-          data-aos="fade-right"
-          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
-          borderRadius={"10px"}
-          p="20px"
-          w="80%"
-          m="40px auto"
-          border={"1px inset #18112C"}
-          className="project-card"
-        >
-          <Flex
-            gap={"30px"}
-            justifyContent={"space-evenly"}
-            direction={{
-              base: "column-reverse",
-              sm: "column-reverse",
-              md: "column-reverse",
-              lg: "row",
-              xl: "row",
-              "2xl": "row",
-            }}
+          <Heading
+            size="lg"
+            mb="15px"
+            fontFamily="cursive"
+            className="project-title"
+            color="#0ef"
           >
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Flex justifyContent={"space-between"}>
-                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                <Box>
-                  <Flex>
-                    <Link
-                      href="https://github.com/Jitugandhare/desisive-duck"
-                      className="project-github-link"
-                    >
-                      <FaGithub style={{ fontSize: "40px" }} />
-                    </Link>
-                    <Link
-                      href="https://desisive-duck.vercel.app/"
-                      className="project-deployed-link"
-                    >
-                      {" "}
-                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-              <Heading
-                textAlign={"left"}
-                size={"md"}
-                mt="10px"
-                className="project-title"
-                fontFamily={"cursive"}
-              >
-                OnFlick
-              </Heading>
-              <Text
-                className="project-description"
-                textAlign={"left"}
-                mt="10px"
-                fontFamily={"cursive"}
-              >
-                "Elevate online shopping with our React-based e-commerce project, featuring a sleek design and seamless functionality. Enjoy intuitive navigation, real-time updates, and secure transactions for a modern and efficient shopping experience."
-              </Text>
+            {project.title}
+          </Heading>
 
-
-              <Box w={"100%"} mt="30px" className="project-tech-stack">
-                <Flex w={"100%"} justifyContent={"space-between"}>
-                  <Text>
-                    <FaReact style={{ fontSize: "40px", color: "#3fc3bd" }} />
-                  </Text>
-                  <Text>
-                    <SiChakraui
-                      style={{ fontSize: "40px", color: "#3fc3bd" }}
-                    />
-                  </Text>
-
-                  <Text>
-                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                  </Text>
-                </Flex>
-              </Box>
-            </Box>
-
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Image w="100%" src={onfli} />
-            </Box>
-          </Flex>
-
-        </Box>
-
-        <Box
-          id="project-sec"
-          data-aos="fade-left"
-          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
-          borderRadius={"10px"}
-          p="20px"
-          w="80%"
-          m="40px auto"
-          border={"1px inset #18112C"}
-          className="project-card"
-        >
-          <Flex
-            gap={"30px"}
-            justifyContent={"space-evenly"}
-            direction={{
-              base: "column-reverse",
-              sm: "column-reverse",
-              md: "column-reverse",
-              lg: "row",
-              xl: "row",
-              "2xl": "row",
-            }}
+          <Text
+            mb="20px"
+            fontFamily="cursive"
+            className="project-description"
+            color="gray.300"
+            lineHeight="1.6"
+            flex="1"
           >
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Image w="100%"
-                src={bb} />
-            </Box>
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Flex justifyContent={"space-between"}>
-                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                <Box>
-                  <Flex>
-                    <Link
-                      href="https://github.com/Jitugandhare/-gutsy-sheet-7629"
-                      className="project-github-link"
-                    >
-                      <FaGithub style={{ fontSize: "40px" }} />
-                    </Link>
-                    <Link
-                      href="https://frolicking-bubblegum-e45b74.netlify.app/"
-                      className="project-deployed-link"
-                    >
-                      {" "}
-                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
-                    </Link>
-                  </Flex>
+            {project.description}
+          </Text>
+
+          {/* Tech Stack */}
+          <Box className="project-tech-stack">
+            <Flex wrap="wrap" justify="center" gap="15px">
+              {project.techStack.map((tech, index) => (
+                <Box key={index} textAlign="center">
+                  <tech.icon style={{ fontSize: "35px", color: tech.color }} />
+                  <Text fontSize="xs" mt="5px" color="gray.400">
+                    {tech.name}
+                  </Text>
                 </Box>
-              </Flex>
-              <Heading
-                textAlign={"left"}
-                size={"md"}
-                mt="10px"
-                className="project-title"
-                fontFamily={"cursive"}
-              >
-                Boat & Bait
-              </Heading>
-              <Text
-                className="project-description"
-                textAlign={"left"}
-                mt="10px"
-                fontFamily={"cursive"}
-              >
-                This is a modern e-commerce platform for buying and exploring exquisite clothes related to babies. It provides a user-friendly interface, a wide range of clothes.
-
-              </Text>
-              <Text textAlign={"left"}>Built Landing Page </Text>
-              <Text textAlign={"left"}>Built Footer Part </Text>
-              <Text textAlign={"left"}>Developed the Authentication functionality</Text>
-              <Text textAlign={"left"}>Payment functionality</Text>
-
-              <Box w={"100%"} mt="30px" className="project-tech-stack">
-                <Flex w={"100%"} justifyContent={"space-between"}>
-                  <Text>
-                    <FaHtml5 style={{ fontSize: "40px", color: "coral" }} />
-                  </Text>
-                  <Text>
-                    <FaCss3Alt style={{ fontSize: "40px", color: "blue" }} />
-                  </Text>
-                  <Text>
-                    <IoLogoJavascript
-                      style={{ fontSize: "40px", color: "#FDD835" }}
-                    />
-                  </Text>
-                  <Text>
-                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                  </Text>
-                </Flex>
-              </Box>
-            </Box>
-
-          </Flex>
+              ))}
+            </Flex>
+          </Box>
         </Box>
 
-        <Box
-          id="project-sec"
-          data-aos="fade-right"
-          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
-          borderRadius={"10px"}
-          p="20px"
-          w="80%"
-          m="40px auto"
-          border={"1px inset #18112C"}
-          className="project-card"
-        >
-          <Flex
-            gap={"30px"}
-            justifyContent={"space-evenly"}
-            direction={{
-              base: "column-reverse",
-              sm: "column-reverse",
-              md: "column-reverse",
-              lg: "row",
-              xl: "row",
-              "2xl": "row",
-            }}
-          >
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Flex justifyContent={"space-between"}>
-                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                <Box>
-                  <Flex>
-                    <Link
-                      href="https://github.com/Jitugandhare/knowledgeable-breath-5856-"
-                      className="project-github-link"
-                    >
-                      <FaGithub style={{ fontSize: "40px" }} />
-                    </Link>
-                    <Link
-                      href="https://roaring-hotteok-b61a42.netlify.app/"
-                      className="project-deployed-link"
-                    >
-                      {" "}
-                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-              <Heading
-                textAlign={"left"}
-                size={"md"}
-                mt="10px"
-                className="project-title"
-                fontFamily={"cursive"}
-              >
-                Mikkushepora
-              </Heading>
-              <Text
-                className="project-description"
-                textAlign={"left"}
-                mt="10px"
-                fontFamily={"cursive"}
-              >
-                "Experience Shepora's essence in our HTML, CSS, and JS clone. Enjoy sleek design, seamless navigation, and dynamic features for a user-friendly showcase of products and content."
-              </Text>
-
-              <Text textAlign={"left"} fontFamily={"cursive"}>
-                Added Login and Signup Functionalities
-              </Text>
-
-              <Text textAlign={"left"} fontFamily={"cursive"} >
-                Built landing page
-              </Text>
-
-
-              <Box w={"100%"} mt="30px" className="project-tech-stack">
-                <Flex w={"100%"} justifyContent={"space-between"}>
-                  <Text>
-                    <FaHtml5 style={{ fontSize: "40px", color: "coral" }} />
-                  </Text>
-                  <Text>
-                    <FaCss3Alt style={{ fontSize: "40px", color: "blue" }} />
-                  </Text>
-                  <Text>
-                    <IoLogoJavascript
-                      style={{ fontSize: "40px", color: "#FDD835" }}
-                    />
-                  </Text>
-
-                </Flex>
-              </Box>
-            </Box>
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Image w="100%" src={mikkushepo} />
-            </Box>
-          </Flex>
+        {/* Image Section */}
+        <Box flex="1" minW={{ base: "100%", lg: "300px" }}>
+          <Image
+            w="100%"
+            h={{ base: "200px", lg: "250px" }}
+            objectFit="cover"
+            borderRadius="10px"
+            src={project.image}
+            alt={`${project.title} Screenshot`}
+            border="2px solid #18112C"
+          />
         </Box>
-
-        <Box
-          id="project-sec"
-          data-aos="fade-left"
-          _hover={{ bg: "#301f5f", border: "1px solid #18112C" }}
-          borderRadius={"10px"}
-          p="20px"
-          w="80%"
-          m="40px auto"
-          border={"1px inset #18112C"}
-          className="project-card"
-        >
-          <Flex
-            gap={"30px"}
-            justifyContent={"space-evenly"}
-            direction={{
-              base: "column-reverse",
-              sm: "column-reverse",
-              md: "column-reverse",
-              lg: "row",
-              xl: "row",
-              "2xl": "row",
-            }}
-          >
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Image w="100%"
-                src={bb} />
-            </Box>
-            <Box
-              w={{
-                base: "100%",
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "100%",
-                "2xl": "100%",
-              }}
-            >
-              <Flex justifyContent={"space-between"}>
-                <BiFolder style={{ fontSize: "40px", color: "#388E3C" }} />
-                <Box>
-                  <Flex>
-                    <Link
-                      href="https://github.com/Jitugandhare/-gutsy-sheet-7629"
-                      className="project-github-link"
-                    >
-                      <FaGithub style={{ fontSize: "40px" }} />
-                    </Link>
-                    <Link
-                      href="https://frolicking-bubblegum-e45b74.netlify.app/"
-                      className="project-deployed-link"
-                    >
-                      {" "}
-                      <BiCopy style={{ fontSize: "40px", marginLeft: "5px" }} />
-                    </Link>
-                  </Flex>
-                </Box>
-              </Flex>
-              <Heading
-                textAlign={"left"}
-                size={"md"}
-                mt="10px"
-                className="project-title"
-                fontFamily={"cursive"}
-              >
-                Boat & Bait
-              </Heading>
-              <Text
-                className="project-description"
-                textAlign={"left"}
-                mt="10px"
-                fontFamily={"cursive"}
-              >
-                This is a modern e-commerce platform for buying and exploring exquisite clothes related to babies. It provides a user-friendly interface, a wide range of clothes.
-
-              </Text>
-              <Text textAlign={"left"} fontFamily={"cursive"}> Built Landing Page </Text>
-              <Text textAlign={"left"} fontFamily={"cursive"}>Built Footer Part </Text>
-              <Text textAlign={"left"} fontFamily={"cursive"}>Developed the Authentication functionality</Text>
-              <Text textAlign={"left"} fontFamily={"cursive"}> Payment functionality</Text>
-
-              <Box w={"100%"} mt="30px" className="project-tech-stack">
-                <Flex w={"100%"} justifyContent={"space-between"}>
-                  <Text>
-                    <FaHtml5 style={{ fontSize: "40px", color: "coral" }} />
-                  </Text>
-                  <Text>
-                    <FaCss3Alt style={{ fontSize: "40px", color: "blue" }} />
-                  </Text>
-                  <Text>
-                    <IoLogoJavascript
-                      style={{ fontSize: "40px", color: "#FDD835" }}
-                    />
-                  </Text>
-                  <Text>
-                    <TbJson style={{ fontSize: "45px", color: "#2e6ff2" }} />
-                  </Text>
-                </Flex>
-              </Box>
-            </Box>
-
-          </Flex>
-        </Box>
-      </Grid>
+      </Flex>
     </Box>
   );
 };
 
+export const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      delay: 100,
+      once: true
+    });
+  }, []);
+
+  return (
+    <Box
+      id="projects"
+      bg="#25262b"
+      color="white"
+      py="60px"
+      px={{ base: "20px", md: "40px" }}
+    >
+      <Heading
+        textAlign="center"
+        className="projects"
+        as="h1"
+        size="2xl"
+        color="#0ef"
+        fontFamily="cursive"
+        mb="50px"
+        data-aos="fade-down"
+      >
+        PROJECTS
+      </Heading>
+
+      <SimpleGrid
+        columns={{ base: 1 }}
+        spacing="40px"
+        maxW="1200px"
+        mx="auto"
+      >
+        {projectsData.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </SimpleGrid>
+    </Box>
+  );
+};

@@ -20,7 +20,7 @@ function App() {
       <Home/>
       <About/>
       
-      <Tools/>
+      <Skills/>
       <Projects/>
       <Github/>
       <Contact/>
